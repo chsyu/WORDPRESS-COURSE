@@ -23,7 +23,27 @@
    }
 
 
+   function postSearchResults($data) {
+      $mainQuery = new WP_Query(array(
+         'post_type' => 'post'
+      ));
 
+      $results = array(
+         'posts' => array(),
+      );
+
+      while($mainQuery->have_posts()) {
+         $mainQuery->the_post();
+
+         array_push($results['posts'], array(
+            'title' => get_the_title(),
+            'content' => get_the_content(),
+            'permalink' => get_the_permalink()
+         ));
+      }
+
+      return $results;
+   }
 
 
 ?>

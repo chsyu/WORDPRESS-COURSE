@@ -31,6 +31,10 @@
             'methods' => WP_REST_SERVER::READABLE,
             'callback' => 'staffSearchResults'
         ));
+        register_rest_route('dtd/v1', 'post', array(
+            'methods' => WP_REST_SERVER::READABLE,
+            'callback' => 'postSearchResults'
+        ));
     }
 
 

@@ -1,5 +1,4 @@
-<?php 
-
+<?php
 
 function dtd_post_types() {
    register_post_type('staff', array(
@@ -35,6 +34,4 @@ function dtd_post_types() {
    ));   
 }
 
-
-
-?>
+add_action('init', 'dtd_post_types');

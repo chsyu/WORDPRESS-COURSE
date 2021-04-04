@@ -14,7 +14,7 @@
 
          array_push($results['projects'], array(
             'title' => get_the_title(),
-            'content' => get_the_content(),
+            // 'content' => get_the_content(),
             'project_site_url' => get_field('project_site_url'),
             'permalink' => get_the_permalink()
          ));

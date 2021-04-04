@@ -1,6 +1,5 @@
 <?php
     require get_theme_file_path('/search-route.php');
-    require get_theme_file_path('/custom-post-field.php');
 
     function web_files(){
         wp_enqueue_style('myStyle', get_stylesheet_uri());
@@ -41,9 +40,7 @@
         ));
     }
 
-
   
-    add_action('init', 'dtd_post_types');
     add_action('after_setup_theme', 'page_features');
     add_action('wp_enqueue_scripts', 'web_files');
     add_action('wp_footer', 'footer_action'); 

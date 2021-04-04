@@ -35,6 +35,10 @@
             'methods' => WP_REST_SERVER::READABLE,
             'callback' => 'postSearchResults'
         ));
+        register_rest_route('dtd/v1', 'project', array(
+            'methods' => WP_REST_SERVER::READABLE,
+            'callback' => 'projectSearchResults'
+        ));
     }
 
 

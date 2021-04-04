@@ -1,5 +1,5 @@
-<?php get_header(); ?>
-<h1>This is the single post page</h1>
+<?php get_header();?>
+<h1>This is the single project page</h1>
 <?php
         while(have_posts()){
             the_post(); ?>

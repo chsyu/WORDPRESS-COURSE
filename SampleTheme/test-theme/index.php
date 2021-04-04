@@ -11,15 +11,13 @@ while (have_posts()) {
 
 <!-- <?php
 $homepagePosts = new WP_Query(array(
-    'posts_per_page' => 1,
-    'post_type' => 'page'
+    'post_type' => 'staff'
 ));
 
 while ($homepagePosts->have_posts()) {
     $homepagePosts->the_post();?>
         <h2><a href="<?php the_permalink()?>"><?php the_title()?></a></h2>
-        <p><?php the_author()?></p>
-        <p><?php echo wp_trim_words(get_the_content())?></p>
+        <p><?php the_content()?></p>
         <hr>
 <?php }?> -->
 <?php get_footer();?>

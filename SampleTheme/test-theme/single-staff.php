@@ -11,7 +11,7 @@
                 <h2><?php the_title()  ?></h2>
                 <p><?php the_content()  ?></p>
             </div>
-            <a href="<?php echo site_url() ?>">Home</a>
+            <a href="<?php echo get_post_type_archive_link('staff') ?>">Back to Staff Archive Page</a>
            <hr>
        <?php }
     ?>

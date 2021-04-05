@@ -7,6 +7,7 @@ function dtd_post_types() {
       'has_archive' => true,
       'supports' => array('title', 'editor', 'thumbnail'),
       'public' => true,
+      'taxonomies' => array('post_tag', 'category'),
       'labels' => array(
             'name' => 'Staff',
             'add_new_item' => 'Add New Staff',
@@ -23,6 +24,7 @@ function dtd_post_types() {
       'has_archive' => true,
       'supports' => array('title', 'editor', 'thumbnail'),
       'public' => true,
+      'taxonomies' => array('post_tag', 'category'),
       'labels' => array(
             'name' => 'Projects',
             'add_new_item' => 'Add New Project',

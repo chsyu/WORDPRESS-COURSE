@@ -1,0 +1,25 @@
+<?php get_header();?>
+    <h1>All Blog Posts:</h1>
+<?php
+while (have_posts()) {
+    the_post();?>
+        <h2><a href="<?php the_permalink()?>"><?php the_title()?></a></h2>
+        <p><?php the_title()?></p>
+        <p><?php the_content()?></p>
+        <hr>
+<?php }?>
+
+<!-- <?php
+$homepagePosts = new WP_Query(array(
+    'posts_per_page' => 1,
+    'post_type' => 'page'
+));
+
+while ($homepagePosts->have_posts()) {
+    $homepagePosts->the_post();?>
+        <h2><a href="<?php the_permalink()?>"><?php the_title()?></a></h2>
+        <p><?php the_author()?></p>
+        <p><?php echo wp_trim_words(get_the_content())?></p>
+        <hr>
+<?php }?> -->
+<?php get_footer();?>
